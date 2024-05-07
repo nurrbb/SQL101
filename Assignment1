@@ -1,0 +1,14 @@
+Q:
+1) Sort the data in the "title" and "description" columns of the film table.
+2) Sort all the data in the film table where the length is greater than 60 and less than 75.
+3) Sort all the data in the film table where the rental rate is 0.99 and the replacement cost is either 12.99 or 28.99.
+4) What is the value in the "last_name" column of the customer table for the customer whose value in the "first_name" column is 'Mary'?
+5) Sort the data in the film table where the length is not greater than 50 and at the same time, the rental rate value is neither 2.99 nor 4.99.
+
+
+A:
+1) SELECT title,description FROM film;
+2) SELECT * FROM film WHERE LENGTH > 60 AND LENGTH > 75;
+3) SELECT * FROM film WHERE rental_rate = 0.99 AND (replacement_cost = 12.99 OR replacement_cost = 28.99); 
+4) SELECT last_name FROM customer WHERE first_name = 'Mary';
+5) SELECT * FROM film WHERE NOT LENGTH > 50 AND (rental_rate=2.99 OR rental_rate=4.99);
