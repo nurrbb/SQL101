@@ -1,0 +1,24 @@
+Q)
+
+1) Sort the country names from the "country" column in the country table that start with the character 'A' and end with the character 'a'.
+
+2) Sort the country names from the "country" column in the country table that consist of at least 6 characters and end with the character 'n'.
+
+3) Sort the film titles from the "title" column in the film table that contain the character 'T' regardless of case sensitivity, with at least 4 characters.
+
+4) Sort the data from all columns in the film table where the title starts with the character 'C', has a length greater than 90, and has a rental_rate of 2.99.
+
+
+A)
+ 
+1) SELECT country FROM country
+   WHERE country like 'A%a'
+
+2) SELECT country FROM country
+   WHERE country like '_____%n'
+
+3) SELECT title FROM film
+   WHERE title ilike '%t%t%t%t%'
+
+4) SELECT * FROM film
+   WHERE title LIKE 'C%' AND LENGTH >90 AND rental_rate = 2.99
