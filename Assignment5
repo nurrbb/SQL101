@@ -1,0 +1,15 @@
+Q:
+
+1) List the top 5 longest films (by length) whose titles end with the character 'n' in the film table.
+
+2) List the next 5 shortest films (with lengths 6, 7, 8, 9, 10) whose titles end with the character 'n' in the film table.
+
+3) Sort the first 4 records in descending order based on the last_name column in the customer table, with the condition that the store_id is 1.
+
+A:
+
+1) SELECT title FROM film WHERE title ILIKE '%n' ORDER BY length LIMIT 5
+
+2) SELECT title FROM film WHERE title ILIKE '%n' ORDER BY length DESC LIMIT 5 OFFSET 5
+
+3) SELECT last_name FROM customer WHERE store_id=1 ORDER BY last_name DESC LIMIT 4
