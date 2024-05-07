@@ -1,1 +1,3 @@
-Patika.dev, SQL course assignments. (SQL, Data and Databases, PostgreSQL, PSQL, SQL fundamentals, Join structures, Subqueries)
+# Patika.dev, SQL Course Assignments
+
+In this commit  a series of practical and assignment projects were completed as part of SQL.
