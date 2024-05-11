@@ -1,0 +1,22 @@
+1) 489
+SELECT COUNT(*) AS total_movie
+FROM film
+WHERE length > (SELECT AVG(length) FROM film);
+
+2)336
+SELECT COUNT(*) AS total_movie
+FROM film
+WHERE rental_rate = (SELECT MAX(rental_rate) FROM film);
+
+3)
+SELECT *
+FROM film
+WHERE rental_rate = (SELECT MIN(rental_rate) FROM film)
+AND replacement_cost = (SELECT MIN(replacement_cost) FROM film);
+
+4)
+SELECT c.customer_id, c.first_name, c.last_name, COUNT(*) AS total
+FROM payment AS p
+JOIN customer AS c ON p.customer_id = c.customer_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+ORDER BY total DESC;
